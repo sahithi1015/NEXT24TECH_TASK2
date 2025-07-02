@@ -3,61 +3,60 @@ AIML Internship
 
 # 🌿 Plant Leaf Disease Detection System Using AI
 
-This project is an AI-powered system that detects plant leaf diseases using deep learning, built to support early diagnosis and sustainable agriculture. It helps farmers identify diseases in crops like tomato, potato, and bell pepper by uploading an image of a leaf and receiving instant feedback.
+This is a machine learning project that detects plant leaf diseases using a deep learning model trained on the PlantVillage dataset. The system is accessible via a simple Streamlit-based web app, where farmers or users can upload leaf images to receive real-time predictions.
 
 ---
 
-## 📌 Project Objective
+## 📌 Objective
 
-The goal of this project is to:
-- Detect plant diseases from leaf images using AI algorithms
-- Improve agricultural yield and quality through early detection
-- Build a user-friendly tool for farmers using a Streamlit web interface
+To build an AI-based system for detecting plant diseases at an early stage using image classification. This helps in minimizing crop damage and increasing agricultural productivity.
 
 ---
 
-## 🗂 Dataset
+## 📂 Dataset
 
-We used the publicly available [PlantVillage Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease) which contains over *40,000+ images* of healthy and diseased plant leaves across *15+ classes*.
-
-- Total Images: 41,000+
-- Number of Classes: 15 (Tomato, Potato, Pepper, etc.)
-- Image Types: JPG
-- Split: 80% Training, 20% Validation
+- *Source*: [PlantVillage Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease)
+- *Total Images*: ~41,000
+- *Number of Classes*: 15 (e.g., Tomato_Bacterial_spot, Potato_Late_blight, etc.)
+- *Format*: JPG images
+- *Split*: 80% Training / 20% Validation using ImageDataGenerator
 
 ---
 
-## 🤖 Model Architecture
+## 🤖 Model Details
 
-- Model: Transfer Learning with *MobileNetV2*
-- Input Shape: 128x128x3
-- Output: Softmax layer for multiclass disease classification
-- Optimizer: Adam
-- Loss: Categorical Crossentropy
-- Metrics: Accuracy
-
-### ✅ Training Summary
-- Training Accuracy: ~56%
-- Final Validation Accuracy: ~85% (after fine-tuning)
-- Epochs: 10–15
+- *Model Used*: MobileNetV2 (Transfer Learning)
+- *Libraries*: TensorFlow, Keras
+- *Input Shape*: 128x128x3
+- *Architecture*:
+  - Base: MobileNetV2 (frozen initially, then fine-tuned)
+  - Classifier: GlobalAveragePooling + Dense layers + Dropout
+- *Output*: Multiclass Softmax (15 disease classes)
 
 ---
 
 ## 🌐 Streamlit Web App
 
-A simple web interface built using *Streamlit* that allows users to upload leaf images and get real-time predictions.
+The app allows users to:
 
-### Features:
-- Upload .jpg, .jpeg, .png images
-- Get predicted disease class
-- See prediction confidence
-- Mobile-friendly interface
+- Upload .jpg, .png, or .jpeg leaf images
+- Instantly get the predicted disease
+- View model confidence score
 
 ---
 
-## 🛠 How to Run the Project
+## 🚀 Getting Started
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/sahithi1015/plant-disease-detector.git
-cd plant-disease-detector
+### 1. Clone the Repo
+
+git clone https://github.com/sahithi1015/NEXT24TECH_TASK2.git
+cd NEXT24TECH_TASK2
+
+### 2.Install Dependencies
+
+pip install -r requirements.txt
+
+### 3.Run the streamlit App
+
+streamlit run plant_disease_detector_view.py
+
