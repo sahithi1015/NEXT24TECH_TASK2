@@ -44,6 +44,15 @@ The app allows users to:
 - View model confidence score
 
 ---
+### Sample Outputs:
+
+
+![image](https://github.com/user-attachments/assets/1d6041ca-1bce-4b42-ae8a-5b822770a8e2)
+
+
+
+![image](https://github.com/user-attachments/assets/40d7d49a-497f-4b3c-af4c-40a05be30175)
+
 
 ## 🚀 Getting Started
 
